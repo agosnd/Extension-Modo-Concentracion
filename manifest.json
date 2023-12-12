@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Basta de boludear", 
+    "options_page": "opciones.html",
+    "version": "1.0.0",
+    "description": "hay que ponerse a laburar.",
+    "icons": {"128":"img/focus-on-128.png"},
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "background": {
+        "service_worker": "background.js"
+      },
+      "action": {},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["bloqueo.js", "opciones.js"]
+        }
+    ]
+}

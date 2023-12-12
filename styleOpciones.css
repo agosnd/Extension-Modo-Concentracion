@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #FE5D26; */
+}
+h1{
+    font-family: Oswald;
+    font-size: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parteDelMedio{
+    border: solid blue 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contLista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid red 1px;
+    align-self: center;
+    width: 100vh;
+    height: 50vh;
+}
+#listaDeUrls{
+    margin: 0px;
+    border: solid red 1px;
+}
+.agregarUrl{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: flex-start;
+    border: solid red 1px;
+}

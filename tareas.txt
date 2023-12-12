@@ -1,0 +1,28 @@
+En Opciones.js:
+
+Funcion inicializarOpciones:
+Luego de obtener listaUrls, iterar por el array (puede estar vacio)
+por cada item del array:
+crear un li con texto = item[i]
+
+
+boton agregar -> click:
+despues de hacer push de la nueva url a la listaUrls, guardar la listaUrls en chrome.storage.sync (usando set)
+
+
+funcion crearItem:
+boton eliminar -> click
+luego de eliminar el elemento html:
+    - obtener url del inner text del parentElement o del primer hijo del parentElement 
+    - quitar url de la listaUrls (chequear como quitar item especifico de un array)
+    - guardar listaurl en chrome.storage.sync (set)
+
+
+darle estilo!
+
+---------------------------------------------
+ideas para futuro:
+-crear pagina para redireccion. hacer funcionar la redireccion.
+-quitar shorts
+-filtrar palabras clave
+-youtube agregar funcionalidad de anotaciones para un video en un momento.
