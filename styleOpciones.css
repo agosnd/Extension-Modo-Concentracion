@@ -5,18 +5,21 @@ body {
     align-items: center;
     margin: 0px;
     padding: 0px;
-    /* background-color: #FE5D26; */
+    background-color: #fff9f9;
 }
 h1{
-    font-family: Oswald;
+    font-family: Afacad;
     font-size: 40px;
-    color: black;
+    color: #FE5D26;
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover{
+        cursor: default;
+    }
 }
 .parteDelMedio{
-    border: solid blue 1px;
+    /* border: solid blue 1px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,20 +29,129 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     align-self: center;
     width: 100vh;
     height: 50vh;
 }
-#listaDeUrls{
+.contListaUrls{
     margin: 0px;
-    border: solid red 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    /* border: black solid 1px; */
 }
 .agregarUrl{
-    margin: 0px;
+    height: 30%;
+    width: 100%;
+    margin: none;
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: flex-start;
-    border: solid red 1px;
+    align-items: center;
+    row-gap: 10px;
+    justify-content: center;
+    /* border: solid red 1px; */
+}
+#listaDeUrls{
+    padding-left: 5px;
+    padding-right: 5px;
+    /* padding: 10px; */
+    /* padding-top: 5px; */
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    overflow-y: auto;
+    margin: 0px;
+    height:95%;
+    background-color: #fff9f9;
+    width: 80%;
+    list-style: none;
+    /* -webkit-box-shadow: 0px 0px 22px -4px rgba(28,28,28,0.82);
+    -moz-box-shadow: 0px 0px 22px -4px rgba(28,28,28,0.82);
+    box-shadow: 0px 0px 22px -4px rgba(28,28,28,0.82); */
+    border-top: solid 3px #FE5D26;
+    border-bottom: solid 3px #FE5D26;
+    /* border: solid 2px #FE5D26; */
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        
+        background: #FE5D26;
+    }
+}
+#urlIngresada{
+    color: #FE5D26;
+    width: 60%;
+    height: 35%;
+    font-size: 20px;
+    background: transparent;
+    border: solid 1px #FE5D26;
+    font-family: Afacad;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#urlIngresada:focus{
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #FE5D26;
+    transition-duration: 0.1s;
+    background-color: #f7a990;
+    color: #fff9f9;
+    &::placeholder{
+        color: #fff9f9;
+    }
+}
+#urlIngresada::placeholder{
+    color: #FE5D26;
+    font-size: 20px;
+    font-family: Afacad;
+
+}
+#btnAgregar{
+    height: 40%;
+    width: 20%;
+    border: solid 1px #FE5D26;
+    background: transparent;
+    color: #FE5D26;
+    font-family: Afacad;
+    font-size: 20px;
+    &:hover{
+        cursor: pointer;
+        background-color: #f7a990;
+        color: #fff9f9;
+        border: none;
+        transition-duration: 0.1s;
+    }
+}
+.itemListaUrls{
+    margin: 0px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+    /* border: solid black 1px; */
+    color: #FE5D26;
+    font-family: Afacad;
+    font-size: 23px;
+}
+.botonItem{
+    display: flex;
+    border: none;
+    align-self: center;
+    background-color: transparent;
+    background-image: url(img/tacho.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    height: 24px;
+    width: 24px;
+    &:hover{
+        cursor: pointer;
+        scale: 1.09;
+        transition-duration: 0.1s;
+    }
 }

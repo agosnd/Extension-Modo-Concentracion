@@ -17,12 +17,13 @@ function crearItem(texto)
 {
     let li = document.createElement("li");
     let btnEliminar = document.createElement("button");
-    let p = document.createElement("p"); 
-    btnEliminar.innerText = "Eliminar";
     p = document.createTextNode(texto);
     li.appendChild(p);
     li.appendChild(btnEliminar);
-
+    li.classList.add('itemListaUrls');
+    btnEliminar.classList.add('botonItem');
+    
+    
 
     btnEliminar.addEventListener("click", () => {
         let liSeleccionado = btnEliminar.parentElement;
@@ -37,10 +38,8 @@ function crearItem(texto)
     });
     ul.appendChild(li);
 }
-
 botonAgregar.addEventListener("click", () => {
     let url = document.getElementById('urlIngresada').value;
-    //let valorBuscado = url;
     const resultado = listaUrls.find(pagina => pagina === url);
         if(resultado == undefined){
             if(url !== ""){
