@@ -10,7 +10,6 @@ function inicializarOpciones(){
             crearItem(valor)
         });
     })
-
 }
 
 function crearItem(texto)
@@ -27,7 +26,7 @@ function crearItem(texto)
 
     btnEliminar.addEventListener("click", () => {
         let liSeleccionado = btnEliminar.parentElement;
-        let urlEliminada = liSeleccionado.firstChild.textContent
+        let urlEliminada = liSeleccionado.firstChild.textContent;
         const resultado = listaUrls.find(url => url  === urlEliminada);
         console.log(resultado);
         let indice = listaUrls.indexOf(resultado);

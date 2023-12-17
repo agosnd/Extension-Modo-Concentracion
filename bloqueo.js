@@ -16,7 +16,9 @@ chrome.storage.local.get("estado").then((result) => {
                 let host = window.location.hostname.toLowerCase();
                 if(pagina ==  host || "www."+ pagina == host)
                 {
-                    document.body.innerHTML = '<h2>deja de boludear pelotuda.</h2>'
+                    //document.body.innerHTML = '<h2>deja de boludear pelotuda.</h2>'
+                    console.log("nueva URL: ", chrome.runtime.getURL("trabajando.html"));
+                    window.location.replace(chrome.runtime.getURL("trabajando.html"));
                 }
             }
         }

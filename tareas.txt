@@ -1,28 +1,31 @@
-En Opciones.js:
+Dar estilo a trabajando.html
 
-Funcion inicializarOpciones:
-Luego de obtener listaUrls, iterar por el array (puede estar vacio)
-por cada item del array:
-crear un li con texto = item[i]
+En bloqueo.js:
+Una vez que se valida que la extension esta activa:
+obtener urls de chrome.storage.sync
+y luego continuar como esta
 
+En opciones, agregar control para quitar shorts de yt.
+guardar en chrome.storage.sync la opcion elegida.
 
-boton agregar -> click:
-despues de hacer push de la nueva url a la listaUrls, guardar la listaUrls en chrome.storage.sync (usando set)
+al inicializar la pagina, buscar tambien esta nueva variable e inicializar el control con el valor que corresponda.
+al modificar el valor manualmente, guardar con chrome.storage.sync.set
 
-
-funcion crearItem:
-boton eliminar -> click
-luego de eliminar el elemento html:
-    - obtener url del inner text del parentElement o del primer hijo del parentElement 
-    - quitar url de la listaUrls (chequear como quitar item especifico de un array)
-    - guardar listaurl en chrome.storage.sync (set)
-
-
-darle estilo!
+En bloqueo.js:
+Despues del for que itera para verificar si la pagina esta bloqueada:
+si la pagina contiene "youtube.com"
+obtener divs a ocultar:
+obtener de chrome.storage.sync el valor de la variable "ocultar shorts"
+si es true:
+document.getElementsByTagName("ytd-rich-section-renderer")
+iterar por los resultados, y a cada uno agregarle style="display:none"
+si es false:
+document.getElementsByTagName("ytd-rich-section-renderer")
+iterar por los resultados, y a cada uno quitarle style="display:none"
 
 ---------------------------------------------
 ideas para futuro:
--crear pagina para redireccion. hacer funcionar la redireccion.
 -quitar shorts
 -filtrar palabras clave
+
 -youtube agregar funcionalidad de anotaciones para un video en un momento.

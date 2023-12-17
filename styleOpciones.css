@@ -1,3 +1,4 @@
+
 body {
     height: 100vh;
     display: flex;
@@ -93,6 +94,16 @@ h1{
     font-family: Afacad;
     padding-left: 8px;
     padding-right: 8px;
+    &:hover{
+        border: none;
+        border-bottom: 3px solid #FE5D26;
+        transition-duration: 0.1s;
+        background-color: #f7a990;
+        color: #fff9f9;
+        &::placeholder{
+        color: #fff9f9;
+        }   
+    }
 }
 
 #urlIngresada:focus{
@@ -126,6 +137,7 @@ h1{
         color: #fff9f9;
         border: none;
         transition-duration: 0.1s;
+        border-bottom: #FE5D26 solid 3px;
     }
 }
 .itemListaUrls{

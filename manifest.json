@@ -19,5 +19,11 @@
             "matches": ["<all_urls>"],
             "js": ["bloqueo.js", "opciones.js"]
         }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [ "trabajando.html" ],
+        "matches": [ "<all_urls>" ]
+      }
     ]
 }
