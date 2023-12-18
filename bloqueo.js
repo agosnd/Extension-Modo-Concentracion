@@ -5,7 +5,7 @@ chrome.storage.local.get("estado").then((result) => {
         console.log(window.location.hostname);
         chrome.storage.sync.get("listaUrls").then((result) =>{
             let listaUrls = result.listaUrls;
-            console.log(listaUrls);
+            // console.log(listaUrls);
             for(i=0;i<listaUrls.length;i++)
             {
                 let pagina = listaUrls[i];
@@ -14,6 +14,17 @@ chrome.storage.local.get("estado").then((result) => {
                 {
                     window.location.replace(chrome.runtime.getURL("trabajando.html"));
                 }
+            }
+            if(window.location.hostname.toLowerCase() == "youtube.com" || window.location.hostname.toLowerCase() == "www.youtube.com"){
+                chrome.storage.sync.get("shorts").then((result) =>{
+                    let shortsValor = result.shorts;
+                    if (shortsValor == true){
+                        let shorts = document.getElementsByTagName("ytd-rich-section-renderer");
+                        for(i = 0; i< shorts.length; i++){
+                            shorts[i].style.display = "none";
+                        }
+                    }
+                })
             }
         })
         

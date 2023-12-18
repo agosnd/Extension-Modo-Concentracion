@@ -79,5 +79,4 @@ botonShorts.addEventListener("click", () => {
         chrome.storage.sync.set({shorts: estadoShorts});
         console.log(estadoShorts)
     }
-        
 })
