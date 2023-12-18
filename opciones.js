@@ -1,5 +1,6 @@
 let botonAgregar = document.getElementById("btnAgregar");
 let ul = document.getElementById("listaDeUrls");
+let botonShorts = document.getElementById("toggle");
 var listaUrls = [];
 
 function inicializarOpciones(){
@@ -9,6 +10,14 @@ function inicializarOpciones(){
         listaUrls.forEach(valor => {
             crearItem(valor)
         });
+    })
+    chrome.storage.sync.get("shorts").then ((result) =>{
+        shorts = result.shorts;
+        if(shorts == true){
+            botonShorts.checked = true;
+        }
+        else
+            botonShorts.checked = false;
     })
 }
 
@@ -59,3 +68,16 @@ botonAgregar.addEventListener("click", () => {
 )
 inicializarOpciones();
 
+botonShorts.addEventListener("click", () => {
+    let estadoShorts = botonShorts.checked;
+    
+    if(estadoShorts == true){
+        console.log(estadoShorts);
+        chrome.storage.sync.set({shorts: estadoShorts});
+    }
+    else{
+        chrome.storage.sync.set({shorts: estadoShorts});
+        console.log(estadoShorts)
+    }
+        
+})

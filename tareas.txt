@@ -22,7 +22,6 @@ iterar por los resultados, y a cada uno agregarle style="display:none"
 si es false:
 document.getElementsByTagName("ytd-rich-section-renderer")
 iterar por los resultados, y a cada uno quitarle style="display:none"
-
 ---------------------------------------------
 ideas para futuro:
 -quitar shorts

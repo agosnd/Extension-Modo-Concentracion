@@ -1,4 +1,8 @@
-
+:root{
+    --colorPredominante:#FE5D26;
+    --colorFondo: #fff9f9;
+    --colorPredominanteClaro: #f7a990;
+}
 body {
     height: 100vh;
     display: flex;
@@ -6,13 +10,14 @@ body {
     align-items: center;
     margin: 0px;
     padding: 0px;
-    background-color: #fff9f9;
+    background-color: var(--colorFondo);
 }
 h1{
     font-family: Afacad;
     font-size: 40px;
-    color: #FE5D26;
+    color: var(--colorPredominante);
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     &:hover{
@@ -67,41 +72,41 @@ h1{
     overflow-y: auto;
     margin: 0px;
     height:95%;
-    background-color: #fff9f9;
+    background-color: var(--colorFondo);
     width: 80%;
     list-style: none;
     /* -webkit-box-shadow: 0px 0px 22px -4px rgba(28,28,28,0.82);
     -moz-box-shadow: 0px 0px 22px -4px rgba(28,28,28,0.82);
     box-shadow: 0px 0px 22px -4px rgba(28,28,28,0.82); */
-    border-top: solid 3px #FE5D26;
-    border-bottom: solid 3px #FE5D26;
+    border-top: solid 3px var(--colorPredominante);
+    border-bottom: solid 3px var(--colorPredominante);
     /* border: solid 2px #FE5D26; */
     &::-webkit-scrollbar{
         width: 5px;
     }
     &::-webkit-scrollbar-thumb{
         
-        background: #FE5D26;
+        background: var(--colorPredominante);
     }
 }
 #urlIngresada{
-    color: #FE5D26;
+    color: var(--colorPredominante);
     width: 60%;
     height: 35%;
     font-size: 20px;
     background: transparent;
-    border: solid 1px #FE5D26;
+    border: solid 1px var(--colorPredominante);
     font-family: Afacad;
     padding-left: 8px;
     padding-right: 8px;
     &:hover{
         border: none;
-        border-bottom: 3px solid #FE5D26;
+        border-bottom: 3px solid var(--colorPredominante);
         transition-duration: 0.1s;
-        background-color: #f7a990;
-        color: #fff9f9;
+        background-color: var(--colorPredominanteClaro);
+        color: var(--colorFondo);
         &::placeholder{
-        color: #fff9f9;
+        color: var(--colorFondo);
         }   
     }
 }
@@ -109,16 +114,16 @@ h1{
 #urlIngresada:focus{
     outline: none;
     border: none;
-    border-bottom: 3px solid #FE5D26;
+    border-bottom: 3px solid var(--colorPredominante);
     transition-duration: 0.1s;
-    background-color: #f7a990;
-    color: #fff9f9;
+    background-color: var(--colorPredominanteClaro);
+    color: var(--colorFondo);
     &::placeholder{
-        color: #fff9f9;
+        color: var(--colorFondo);
     }
 }
 #urlIngresada::placeholder{
-    color: #FE5D26;
+    color: var(--colorPredominante);
     font-size: 20px;
     font-family: Afacad;
 
@@ -126,18 +131,18 @@ h1{
 #btnAgregar{
     height: 40%;
     width: 20%;
-    border: solid 1px #FE5D26;
+    border: solid 1px var(--colorPredominante);
     background: transparent;
-    color: #FE5D26;
+    color: var(--colorPredominante);
     font-family: Afacad;
     font-size: 20px;
     &:hover{
         cursor: pointer;
-        background-color: #f7a990;
-        color: #fff9f9;
+        background-color: var(--colorPredominanteClaro);
+        color: var(--colorFondo);
         border: none;
         transition-duration: 0.1s;
-        border-bottom: #FE5D26 solid 3px;
+        border-bottom: var(--colorPredominante) solid 3px;
     }
 }
 .itemListaUrls{
@@ -146,9 +151,12 @@ h1{
     column-gap: 10px;
     justify-content: space-between;
     /* border: solid black 1px; */
-    color: #FE5D26;
+    color: var(--colorPredominante);
     font-family: Afacad;
     font-size: 23px;
+    &:hover{
+        cursor: default;
+    }
 }
 .botonItem{
     display: flex;
@@ -166,4 +174,57 @@ h1{
         scale: 1.09;
         transition-duration: 0.1s;
     }
+}
+.shortsYoutube{
+    display: flex;
+    column-gap: 5px;
+    /* border: solid 1px blue; */
+    justify-content: center;
+    align-items: center;
+}
+.textoShorts{
+    color: var(--colorPredominante);
+    text-align: center;
+    font-size: 20px;
+    font-family: Afacad;
+    /* border: solid 1px red; */
+    &:hover{
+        cursor: default;
+    }
+}
+.botonDesactivar{
+    height: 100%;
+    display: flex;
+    /* border: solid 1px green; */
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #d2cccc;
+    border-radius: 20px;    
+    cursor: pointer;
+}
+.switch::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: rgb(170, 169, 169);
+    left: 3px;
+    top: 2px;
+    transition: all 0.2s;
+}
+input[type='checkbox']:checked + .switch::after{
+    transform: translateX(19px);
+    background-color: var(--colorPredominante);
+}
+input[type='checkbox']:checked + .switch{
+    background-color: var(--colorPredominanteClaro);
+}
+.offScreen{
+    position: absolute;
+    left: -99999999px;
 }
