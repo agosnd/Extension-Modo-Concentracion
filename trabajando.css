@@ -1,7 +1,7 @@
 :root{
     --fondo: #aec2fa;
     --color-letras: rgb(26, 37, 185);
-    --miNombreColor: rgb(22, 146, 234);
+    --textoColor: rgb(22, 146, 234);
 }
 *{
     margin: 0px;
@@ -42,19 +42,17 @@ body{
 }
 .frase{
     color: var(--color-letras);
-    font-size: 60px;
+    font-size: 5rem;
     font-family: Bebas Neue;
     text-align: center;
-    display: inline-block;
     &:hover{
         cursor: default;
     }
 }
-
 .miNombre{
-    color: var(--miNombreColor);
+    color: var(--textoColor);
     font-family: Kanit;
-    font-size: 40px;
+    font-size: 2.5rem;
     text-align: center;
     position: relative;
     &:hover{
@@ -63,13 +61,13 @@ body{
 }
 .miNombre::after{
     content: "";
-    border-left: solid 3px var(--miNombreColor);
+    border-left: solid 3px var(--textoColor);
     background: var(--fondo);
     width: 100%;
     right: 0;
     height: 100%;
     position: absolute;
-    animation: maquinaDeEscribir 3s infinite alternate steps(24),
+    animation: maquinaDeEscribir 3s infinite alternate steps(28),
     cursor .5s step-end infinite alternate; 
 }
 @keyframes cursor{
@@ -84,3 +82,38 @@ body{
     }
 }
 
+@media screen and (max-width : 850px ){
+    .frase{
+        font-size: 4rem;
+        text-align: center;
+    }
+    .miNombre{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+@media (width <= 650px){
+    .frase{
+        font-size: 3.5rem;
+    }
+    .miNombre{
+        font-size: 2rem;
+        text-wrap: wrap;
+    }
+}
+@media screen and (max-width: 570px){
+    .frase{
+        inline-size: 520px;
+        overflow-wrap: break-word;
+    }
+}
+@media screen and (max-width: 430px){
+    .frase{
+        inline-size: 380px;
+        overflow-wrap: break-word;
+    }
+    .miNombre{
+        display: none;
+    }
+}
