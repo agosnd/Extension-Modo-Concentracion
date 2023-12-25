@@ -26,8 +26,8 @@
 
 ![extension desactivada](img/readme/image-3.png)
 
-![extension activada](img/readme/image-5.png)
+![extension activada](img/readme/image-4.png)
 
 - Finalmente, si la extension esta activada e intentamos entrar a una pagina que hayamos ingresado en la lista, esta se bloqueara y no se podra acceder hasta que la extension se desactive.
 
-![pagina bloqueada](img/readme/image-6.png)
+![pagina bloqueada](img/readme/image-5.png)
