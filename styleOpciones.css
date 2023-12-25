@@ -2,19 +2,25 @@
     --colorPredominante:#FE5D26;
     --colorFondo: #fff9f9;
     --colorPredominanteClaro: #f7a990;
+    --fuentePredominante: Afacad;
+}
+*{
+    box-sizing: border-box;
 }
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     margin: 0px;
     padding: 0px;
     background-color: var(--colorFondo);
 }
 h1{
-    font-family: Afacad;
-    font-size: 40px;
+    min-width:auto ;
+    margin: 0;
+    font-family: var(--fuentePredominante);
+    font-size: 8vh;
     color: var(--colorPredominante);
     display: flex;
     text-align: center;
@@ -23,34 +29,37 @@ h1{
     &:hover{
         cursor: default;
     }
+    /* border: solid red 1px; */
 }
 .parteDelMedio{
+    height: 80vh;
     /* border: solid blue 1px; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .contLista{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    row-gap: 2vh;
     /* border: solid red 1px; */
     align-self: center;
     width: 100vh;
-    height: 50vh;
+    height: 70vh;
 }
 .contListaUrls{
     margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    height: 60%;
     width: 100%;
     /* border: black solid 1px; */
 }
 .agregarUrl{
-    height: 30%;
+    max-height: max-content;
     width: 100%;
     margin: none;
     display: flex;
@@ -71,7 +80,7 @@ h1{
     align-self: center;
     overflow-y: auto;
     margin: 0px;
-    height:95%;
+    height: 30vh;
     background-color: var(--colorFondo);
     width: 80%;
     list-style: none;
@@ -91,12 +100,12 @@ h1{
 }
 #urlIngresada{
     color: var(--colorPredominante);
-    width: 60%;
-    height: 35%;
+    width: 70vh;
+    height: 6vh;
     font-size: 20px;
     background: transparent;
     border: solid 1px var(--colorPredominante);
-    font-family: Afacad;
+    font-family: var(--fuentePredominante);
     padding-left: 8px;
     padding-right: 8px;
     &:hover{
@@ -125,16 +134,17 @@ h1{
 #urlIngresada::placeholder{
     color: var(--colorPredominante);
     font-size: 20px;
-    font-family: Afacad;
+    font-family: var(--fuentePredominante);
 
 }
 #btnAgregar{
-    height: 40%;
-    width: 20%;
+    padding: 5px;
+    height: 67h;
+    width: 30vh;
     border: solid 1px var(--colorPredominante);
     background: transparent;
     color: var(--colorPredominante);
-    font-family: Afacad;
+    font-family: var(--fuentePredominante);
     font-size: 20px;
     &:hover{
         cursor: pointer;
@@ -152,7 +162,7 @@ h1{
     justify-content: space-between;
     /* border: solid black 1px; */
     color: var(--colorPredominante);
-    font-family: Afacad;
+    font-family: var(--fuentePredominante);
     font-size: 23px;
     &:hover{
         cursor: default;
@@ -171,7 +181,7 @@ h1{
     width: 24px;
     &:hover{
         cursor: pointer;
-        scale: 1.09;
+        scale: 1.1;
         transition-duration: 0.1s;
     }
 }
@@ -186,7 +196,7 @@ h1{
     color: var(--colorPredominante);
     text-align: center;
     font-size: 20px;
-    font-family: Afacad;
+    font-family: var(--fuentePredominante);
     /* border: solid 1px red; */
     &:hover{
         cursor: default;
@@ -195,6 +205,7 @@ h1{
 .botonDesactivar{
     height: 100%;
     display: flex;
+    align-items: center;
     /* border: solid 1px green; */
 }
 .switch{
@@ -227,4 +238,50 @@ input[type='checkbox']:checked + .switch{
 .offScreen{
     position: absolute;
     left: -99999999px;
+}
+@media screen and (max-width: 670px){
+    h1{
+        inline-size: 400px;
+        overflow-wrap: break-word;
+    }
+    /* #listaDeUrls{
+        width: 80vw;
+    } */
+    /* 
+    } */
+    
+}
+@media screen and (max-width:540px){
+    body{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 470px ){
+    #listaDeUrls{
+        width: 80vw;
+    }
+    h1{
+        font-size: 7vh;
+    }
+    #urlIngresada{
+        width: 80vw;
+    }
+    #btnAgregar{
+        width: 40vw;
+    }
+}
+@media screen and (max-width:390px){
+    .parteDelMedio{
+        height: 90vh;
+    }
+    h1{
+        inline-size: 200px;
+        overflow-wrap: break-word;
+        font-size: 7vh;
+    }
+    .shortsYoutube{
+        flex-direction: column;
+    }
 }

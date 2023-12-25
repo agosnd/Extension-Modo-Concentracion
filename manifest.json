@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "Basta de boludear", 
+    "name": "Modo Concentracion", 
     "options_page": "opciones.html",
     "version": "1.0.0",
-    "description": "hay que ponerse a laburar.",
+    "description": "extension para concentrarse mientras trabajas o estudias en una computadora",
     "icons": {"128":"img/focus-on-128.png"},
     "permissions": [
         "storage",

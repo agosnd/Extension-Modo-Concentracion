@@ -1,30 +1,14 @@
-Dar estilo a trabajando.html
+crear readme.md
+agregar breve descripcion de que es el proyecto.
 
-En bloqueo.js:
-Una vez que se valida que la extension esta activa:
-obtener urls de chrome.storage.sync
-y luego continuar como esta
+tomar ejemplo de como instalar:
+https://github.com/iamadamdev/bypass-paywalls-chrome
 
-En opciones, agregar control para quitar shorts de yt.
-guardar en chrome.storage.sync la opcion elegida.
+poner algunas imagenes mostrando como configurarlo
 
-al inicializar la pagina, buscar tambien esta nueva variable e inicializar el control con el valor que corresponda.
-al modificar el valor manualmente, guardar con chrome.storage.sync.set
-
-En bloqueo.js:
-Despues del for que itera para verificar si la pagina esta bloqueada:
-si la pagina contiene "youtube.com"
-obtener divs a ocultar:
-obtener de chrome.storage.sync el valor de la variable "ocultar shorts"
-si es true:
-document.getElementsByTagName("ytd-rich-section-renderer")
-iterar por los resultados, y a cada uno agregarle style="display:none"
-si es false:
-document.getElementsByTagName("ytd-rich-section-renderer")
-iterar por los resultados, y a cada uno quitarle style="display:none"
+codigo:
+en el css trabajar los mediaquery que faltan.
 ---------------------------------------------
-ideas para futuro:
--quitar shorts
--filtrar palabras clave
 
+ideas para futuro:
 -youtube agregar funcionalidad de anotaciones para un video en un momento.
